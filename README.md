@@ -1,20 +1,36 @@
+# 🪂 Foundry Merkle Airdrop CU
 
+> A simple and gas-optimized Merkle tree–based airdrop contract built using Foundry.  
+> Users can claim tokens if they are in a predefined Merkle tree and provide a valid EIP-712 signature.
 
+---
 
+## 📦 Features
 
+- ✅ Airdrop protected by a Merkle root (only whitelisted addresses can claim)
+- ✅ EIP-712 signature verification (ensures the claim is authorized)
+- ✅ Single-claim enforcement (no double-spending)
+- ✅ Uses OpenZeppelin libraries for security
+- ✅ Built and tested using [Foundry](https://book.getfoundry.sh/)
 
+---
 
+## 🧱 Contract Summary
 
-## Foundry
+- The contract uses:
+  - `MerkleProof` for validating whitelist
+  - `EIP712` & `ECDSA` for verifying claims via off-chain signatures
+  - `SafeERC20` for safe token transfers
+- A user must:
+  1. Have a valid Merkle proof
+  2. Provide a valid EIP-712 signature
+  3. Have not claimed before
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+---
 
-Foundry consists of:
+## 🧪 How to Test It
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### 1. Clone & Install
 
 ## Documentation
 
